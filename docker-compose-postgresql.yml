@@ -9,7 +9,10 @@ services:
       - NET_ADMIN
     env_file: 
       - letsencrypt/letsencrypt.env
-     
+    networks:
+      - frontend
+      - backend
+      
   postgresql:
     build:
       context: ./postgresql
