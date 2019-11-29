@@ -9,8 +9,7 @@ services:
       - NET_ADMIN
     env_file: 
       - letsencrypt/letsencrypt.env
-    
-   
+     
   postgresql:
     build:
       context: ./postgresql
@@ -24,15 +23,13 @@ services:
     networks:
       - backend
 
-# coTURN
   coturn:
-    build:
-      context: ./coturn
+    image: cybergatelabs/coturn
     restart: always
     volumes:
-      - ${PWD}/coturn/turnserver.conf:/etc/turnserver.conf
-      - ${PWD}/coturn/privkey.pem:/etc/ssl/private/privkey.pem
-      - ${PWD}/coturn/cert.pem:/etc/ssl/certs/cert.pem
+      - ./coturn/turnserver.conf:/etc/turnserver.conf
+      - ./coturn/privkey.pem:/etc/ssl/private/privkey.pem
+      - ./coturn/cert.pem:/etc/ssl/certs/cert.pem
     ports:
 ## STUN/TURN
       - "3478:3478"
