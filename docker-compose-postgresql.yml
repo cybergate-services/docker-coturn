@@ -5,7 +5,7 @@ services:
     restart: unless-stopped
     container_name: letsencrypt
     hostname: letsencrypt
-    ap_add:
+    cap_add:
       - NET_ADMIN
     volumes:
       - ./data/letsencrypt/config:/config
