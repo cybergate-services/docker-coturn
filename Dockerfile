@@ -12,4 +12,4 @@ RUN mkdir -p /etc/ssl/le
 COPY /run/secure_relay_with_db_psql.sh /secure_relay_with_db_psql.sh
 RUN chmod +x secure_relay_with_db_psql.sh
 
-CMD ["/secure_relay_with_db_psql.sh]
+CMD ["/secure_relay_with_db_psql.sh"]
