@@ -40,6 +40,8 @@ services:
     
   coturn:
     image: cybergatelabs/coturn
+    container_name: coturn
+    hostname: coturn
     restart: always
     env_file: 
       - coturn/coturn.env
