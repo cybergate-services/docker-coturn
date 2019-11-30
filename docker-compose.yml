@@ -27,7 +27,17 @@ services:
       - postgresql/postgresql.env
     networks:
       - backend
-
+  
+  dbadmin:
+    image: cybergatelabs/dbadmin
+    container_name: dbadmin
+    hostname: dbadmin
+    restart: always
+    #ports:
+    #  - 8080:8080
+    networks:
+      - backends    
+    
   coturn:
     image: cybergatelabs/coturn
     restart: always
