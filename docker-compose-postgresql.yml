@@ -32,7 +32,8 @@ services:
     image: cybergatelabs/coturn
     restart: always
     volumes:
-      - ./data/letsencrypt/config/etc/letsencrypt:/etc/ssl/le
+      - ./data/letsencrypt/config/etc/letsencrypt/live/bis.lexiicontech.com:/etc/ssl/le
+      - ./${LE_SSL_CERT-PATH}/${TURNSERVER_FQDN}:/etc/ssl/le
     ports:
 ## STUN/TURN
       - "3478:3478"
