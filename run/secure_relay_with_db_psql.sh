@@ -27,14 +27,16 @@
 # Other parameters (config file name, etc) are default.
 
 turnserver --server-name="blackdow.carleon.gov" \
-  -v --syslog \
+  --verbose \ 
+  --syslog \
+  --lt-cred-mech  
   --max-bps=3000000 \
-  -f \
-  -m 3 \
+  --fingerprint \
+  ---relay-threads 3 \
   --min-port=49152 --max-port=65535 \
   -r north.gov \
-  --psql-userdb=postgresql://turn:turn@/turn \
-  --cert=turn_server_cert.pem --pkey=turn_server_pkey.pem \
+  --psql-userdb=psql-userdb="host=postgresql dbname=coturn user=coturn password=${PSQL_DB_PASSWORD} connect_timeout=30" \
+  --cert=/etc/ssl/le/cert.pem --pkey=/etc/ssl/prikey.pem \
   --log-file=stdout \
   --cipher-list=ALL \
   --oauth \
