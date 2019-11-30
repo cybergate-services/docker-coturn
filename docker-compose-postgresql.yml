@@ -48,8 +48,8 @@ services:
       - "5349:5349/udp"
       - "5350:5350"
       - "5350:5350/udp"
-      - "443:443"
-      - "443:443/udp"
+      - "8443:443"
+      - "8443:443/udp"
 # Relay Ports
 #      - "49152-65535:49152-65535"
 #      - "49152-65535:49152-65535/udp"
@@ -58,9 +58,9 @@ services:
       - backend
     depends_on:
       - postgresql
+      - letsencrypt
     env_file:
       - coturn/coturn.env
-# DB
       - postgresql/postgresql.env
 volumes:
   postgresql-data:
