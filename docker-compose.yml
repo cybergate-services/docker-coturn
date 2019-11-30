@@ -5,6 +5,9 @@ services:
     restart: unless-stopped
     container_name: letsencrypt
     hostname: letsencrypt
+    ports:
+      - 80:80
+      - 443:443
     cap_add:
       - NET_ADMIN
     volumes:
