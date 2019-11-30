@@ -49,7 +49,7 @@ services:
     env_file: 
       - coturn/coturn.env
     volumes:
-      - ./${LE_SSL_CERT_PATH}/${TURN_SERVER_FQDN}:/etc/ssl/le
+      - ./data/letsencrypt/config/etc/letsencrypt/live:/etc/ssl/le
     ports:
     ## STUN/TURN
       - "3478:3478"
