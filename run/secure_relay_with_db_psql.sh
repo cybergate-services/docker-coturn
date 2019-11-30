@@ -1,6 +1,6 @@
-#!/bin/sh
+#!/bin/bash -x
 #
-turnserver --server-name="${TURN_SERVER_FQDN}" \
+turnserver --server-name=${TURN_SERVER_FQDN} \
   --verbose \ 
   --syslog \
   --lt-cred-mech \
