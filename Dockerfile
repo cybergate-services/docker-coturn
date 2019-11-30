@@ -9,14 +9,7 @@ RUN apt-get update && \
   apt-get clean && \
   rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-ENV TURN_PORT 3478
-ENV TURN_PORT_START 10000
-ENV TURN_PORT_END 20000
-ENV TURN_SECRET  cybersecret
-ENV TURN_SERVER_NAME coturn
-ENV TURN_REALM cybergate.lk
+COPY /run/secure_relay_with_db_psql.sh /secure_relay_with_db_psql.sh
+RUN chmod +x secure_relay_with_db_psql.sh
 
-ADD start_coturn.sh start_coturn.sh
-RUN chmod +x start_coturn.sh
-
-CMD ["./start_coturn.sh"]
+CMD ["/secure_relay_with_db_psql.sh]
