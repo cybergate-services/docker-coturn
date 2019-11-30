@@ -40,5 +40,4 @@ turnserver --server-name="blackdow.carleon.gov" \
   --log-file=stdout \
   --cipher-list=ALL \
   --oauth \
-  --cli-password=secret \
-  $@
+  --cli-password=${CLI_PASSWORD} $@
