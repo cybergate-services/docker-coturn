@@ -1,4 +1,4 @@
-version: '2'
+version: '3'
 services:
   letsencrypt:
     image: cybergatelabs/letsencrypt
@@ -32,7 +32,6 @@ services:
     image: cybergatelabs/coturn
     restart: always
     volumes:
-      volumes:
       - ./data/letsencrypt/config/etc/letsencrypt:/etc/ssl/le
     ports:
 ## STUN/TURN
