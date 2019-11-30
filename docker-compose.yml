@@ -36,7 +36,7 @@ services:
     #ports:
     #  - 8080:8080
     networks:
-      - backends    
+      - backend  
     
   coturn:
     image: cybergatelabs/coturn
