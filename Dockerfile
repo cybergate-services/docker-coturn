@@ -3,8 +3,7 @@ MAINTAINER Chinthaka Deshapriya <chinthaka@cybergate.lk>
 
 RUN apt-get update && \ 
   apt-get install -y coturn && \
-  apt-get install -y postgresql-client && \/etc/ssl/le
-  apt-get install -y mariadb-client && \
+  apt-get install -y postgresql-client && \
   apt-get install net-tools && \
   apt-get clean && \
   rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
