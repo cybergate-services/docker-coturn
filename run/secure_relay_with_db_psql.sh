@@ -28,15 +28,10 @@
 
 turnserver --server-name="blackdow.carleon.gov" \
   -v --syslog \
-  -a -L 127.0.0.1 \
-  -L ::1 \
-  -E 127.0.0.1 \
-  -E ::1 \
-  --allow-loopback-peers \
   --max-bps=3000000 \
   -f \
   -m 3 \
-  --min-port=32355 --max-port=65535 \
+  --min-port=49152 --max-port=65535 \
   -r north.gov \
   --psql-userdb=postgresql://turn:turn@/turn \
   --cert=turn_server_cert.pem --pkey=turn_server_pkey.pem \
