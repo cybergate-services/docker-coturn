@@ -33,7 +33,7 @@ services:
     restart: always
     volumes:
       volumes:
-      - ./data/letsencrypt/config/etc/letsencrypt:/etc/ssl
+      - ./data/letsencrypt/config/etc/letsencrypt:/etc/ssl/le
     ports:
 ## STUN/TURN
       - "3478:3478"
