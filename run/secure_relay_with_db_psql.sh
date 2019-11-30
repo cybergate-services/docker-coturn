@@ -11,8 +11,8 @@ turnserver --server-name=${TURN_SERVER_FQDN} \
   --max-port=${MAX_PORT} \
   --realm ${REALM} \
   --psql-userdb="host=postgresql dbname=coturn user=coturn password=${PSQL_DB_PASSWORD} connect_timeout=30" \
-  --cert=/etc/ssl/le/cert.pem \
-  --pkey=/etc/ssl/le/privkey.pem \
+  --cert=/etc/ssl/le/${TURN_SERVER_FQDN}/cert.pem \
+  --pkey=/etc/ssl/le/${TURN_SERVER_FQDN}/privkey.pem \
   --log-file=stdout \
   --cipher-list=ALL \
   --oauth \
