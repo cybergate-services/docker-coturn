@@ -6,7 +6,7 @@
 # git clone https://github.com/cybergate-services/docker-coturn.git
 # cd /opt/docker-coturn
 ```
-**2. To Setup docker compose envioronment run:**
+**2. To setup docker compose envioronment run:**
 ```
 # ./set-env.sh
 ```
