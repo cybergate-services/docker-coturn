@@ -27,7 +27,7 @@ services:
     volumes:
       - postgresql-data:/var/lib/postgresql/data
     env_file: 
-      - postgresql/postgresql.env
+      - ./.postgresql.env
     networks:
       - backend
   
