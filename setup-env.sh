@@ -8,6 +8,8 @@ cat coturn/coturn.env >> ./.cotrun.env
 echo "CHANGE_ME=${PASSWORD}" > ./.postgresql.env
 cat postgresql/postgresql.env >> ./.postgresql.env
 
+cat letsencrypt/letsencrypt.env > ./.letsencrypt.env
+
 echo "CHANGE_ME=${PASSWORD}" > ./.env
 cat coturn/coturn.env >> ./.env
 cat postgresql/postgresql.env >> ./.env
