@@ -2,7 +2,7 @@
 rm -rf ./.env
 PASSWORD=$(openssl rand -base64 16)
 
-echo "CHANGE_ME=${PASSWORD}" > ./.cotrun.env
+echo "CHANGE_ME=${PASSWORD}" > ./.coturn.env
 cat coturn/coturn.env >> ./.cotrun.env
 
 echo "CHANGE_ME=${PASSWORD}" > ./.postgresql.env
