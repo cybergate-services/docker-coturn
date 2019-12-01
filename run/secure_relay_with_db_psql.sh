@@ -16,4 +16,6 @@ turnserver --server-name=${TURN_SERVER_FQDN} \
   --log-file=stdout \
   --cipher-list=ALL \
   --oauth \
+  --user=cgadmin:${USER_SECRET}
+  
   --cli-password=${CLI_PASSWORD} $@
