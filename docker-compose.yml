@@ -13,7 +13,7 @@ services:
     volumes:
       - ./data/letsencrypt/config:/config
     env_file: 
-      - letsencrypt/letsencrypt.env
+      - ./.letsencrypt.env
     networks:
       - frontend
       - backend
@@ -47,7 +47,7 @@ services:
     hostname: coturn
     restart: always
     env_file: 
-      - coturn/coturn.env
+      - /.coturn.env
     volumes:
       - ./data/letsencrypt/config/etc/letsencrypt/live:/etc/ssl/le
     ports:
@@ -75,8 +75,8 @@ services:
       - postgresql
       - letsencrypt
     env_file:
-      - coturn/coturn.env
-      - postgresql/postgresql.env
+      - ./.coturn.env
+      - ./.postgresql.env
 volumes:
   postgresql-data:
 
