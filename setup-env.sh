@@ -13,5 +13,6 @@ sed -i -e "s/CHANGE_ME/$PASSWORD/g" ./.postgresql.env
 cat letsencrypt/letsencrypt.env > ./.letsencrypt.env
 
 echo "CHANGE_ME=${PASSWORD}" > ./.env
-cat coturn/coturn.env >> ./.env
+cat ./.coturn.env  >> ./.env
+cat ./.postgresql.env >> ./.env
 cat postgresql/postgresql.env >> ./.env
