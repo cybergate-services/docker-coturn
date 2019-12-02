@@ -1,6 +1,6 @@
 #!/bin/bash
 rm -rf ./.env
-PASSWORD=$(openssl rand -hex 16)
+PASSWORD=$(LC_ALL=C </dev/urandom tr -dc A-Za-z0-9 | head -c 28)
 TURN_USER_SECRET=$(openssl rand -hex 16)
 
 cat coturn/coturn.env > ./.coturn.env
