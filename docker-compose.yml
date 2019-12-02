@@ -12,6 +12,8 @@ services:
       - NET_ADMIN
     volumes:
       - ./data/letsencrypt/config:/config
+      - ./conf/proxy/dbadmin.subdomain.conf:/config/nginx/proxy-confs/dbadmin.subdomain.conf
+      - ./conf/proxy/turn.subdomain.conf:/config/nginx/proxy-confs/turn.subdomain.conf
     env_file: 
       - ./.letsencrypt.env
     networks:
